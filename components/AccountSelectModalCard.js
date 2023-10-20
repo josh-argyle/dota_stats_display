@@ -13,9 +13,7 @@ function AccountSelectModalCard(props) {
             <View style={styles.textBox}>
                 <Text style={styles.text}>{props.username}</Text>
             </View>
-
             <Image source={{ uri: props.displayPictureURL }} style={styles.image} />
-            {/*<Text>{props.accountID}</Text>*/}
         </Pressable>
     )
 }
@@ -27,8 +25,11 @@ const styles = StyleSheet.create({
         height: 80,
         flexDirection: "row",
         borderWidth: 1,
-        borderColor: 'red',
-        marginBottom: 4,
+        borderColor: 'black',
+        borderRadius: 12,
+        marginHorizontal: 4,
+        marginVertical: 3,
+        backgroundColor: '#313a2c',
     },
     textBox: {
         alignItems: "center",
@@ -36,14 +37,17 @@ const styles = StyleSheet.create({
         width: 220,
     },
     text: {
-        fontSize: 16,
+        fontSize: 22,
+        color: "white",
     },
     username: {
     },
     image: {
-        width: 80,
-        height: 80,
-        alignSelf: "flex-end"
+        width: 76,
+        height: 78,
+        alignSelf: "center",
+        borderWidth: 1,
+        borderColor: 'black',
     },
     idNumber: {
 

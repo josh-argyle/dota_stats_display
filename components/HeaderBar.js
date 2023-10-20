@@ -1,5 +1,4 @@
 import {Image, StyleSheet, Text, View} from "react-native";
-import {useState} from "react";
 
 function HeaderBar(props) {
 
@@ -22,36 +21,28 @@ export default HeaderBar;
 const styles = StyleSheet.create({
     headerBox: {
         width: '100%',
-        // height: 100,
         height: 96,
         flexDirection: "row",
-        // flex: 1,
-        borderColor: 'red',
+        borderColor: 'black',
         borderWidth: 1,
-        backgroundColor: '#ae90da',
+        backgroundColor: '#313a2c',
         borderRadius: 20,
     },
     usernameBox: {
         flex: 1,
-        // width: 100,
-        // height: 100,
-        borderColor: 'white',
-        borderWidth: 1,
         justifyContent: "center",
         alignItems: "center",
     },
     username: {
         fontSize: 18,
-
+        color: 'white',
     },
     mmrEstimate: {
         fontSize: 14,
-
+        color: 'white',
     },
     imageBox: {
         flex: 1,
-        borderColor: 'red',
-        borderWidth: 1,
         justifyContent: "center",
     },
     image: {
@@ -59,5 +50,4 @@ const styles = StyleSheet.create({
         height: 80,
         alignSelf: "center",
     },
-
 });

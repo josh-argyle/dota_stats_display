@@ -1,21 +1,17 @@
-import {StatusBar} from 'expo-status-bar';
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import HeaderBar from "./components/HeaderBar";
 import SearchBar from "./components/SearchBar";
 import {useEffect, useState} from "react";
-import {act} from "react-dom/test-utils";
 import DetailsPanel from "./components/DetailsPanel";
 
 export default function App() {
 
-    const [activeAccount, setActiveAccount] = useState('');
     const [activeAccountOverviewData, setActiveAccountOverviewData] = useState([]);
     const [activeAccountMatchData, setActiveAccountMatchData] = useState([]);
     const [foundFirstAccount, setFoundFirstAccount] = useState(false);
 
     function handleReceiveAccountID(acctID) {
         console.log('setting state');
-        setActiveAccount(acctID);
         getAccountOverviewData(acctID)
             .then(r => console.log("Successfully got overview data"));
         getAccountMatchData(acctID)
@@ -91,7 +87,7 @@ const styles = StyleSheet.create({
         padding: 8,
         paddingTop: 32,
         flex: 1,
-        backgroundColor: '#580ac9',
+        backgroundColor: "#D36135",
         alignItems: 'center',
         // justifyContent: 'center',
     },

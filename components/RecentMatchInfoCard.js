@@ -1,8 +1,6 @@
-import {FlatList, Image, StyleSheet, Text, View} from "react-native";
-import AccountSelectModalCard from "./AccountSelectModalCard";
+import {Image, StyleSheet, Text, View} from "react-native";
 import {useEffect, useState} from "react";
 import jsonData from '../assets/DotaConstants/hero_names.json';
-import {get} from "react-native/Libraries/TurboModule/TurboModuleRegistry";
 
 function RecentMatchInfoCard(props) {
 
@@ -71,24 +69,20 @@ export default RecentMatchInfoCard;
 const styles = StyleSheet.create({
     container: {
         flexDirection: "row",
-        marginTop: 4,
-        borderWidth: 2,
-        borderColor: "white",
+        marginTop: 2,
+        paddingLeft: 8,
         width: "100%",
         height: 42,
-        // height: 70,
+        borderRadius: 12,
+        backgroundColor: '#313a2c',
     },
     text: {
-        // padding: 8,
-        // borderRadius: 6,
-        // alignItems: "center",
         color: "white",
         fontSize: 12,
     },
     image: {
         width: 36,
         height: 36,
-        // alignSelf: "flex-end"
     },
     imageBox: {
         justifyContent: "center",

@@ -14,6 +14,7 @@ function SearchBar (props) {
 
     const getPlayerID = async () => {
         const url = `https://api.opendota.com/api/search?q=${enteredUsername}`;
+        setIsModalOpen(true);
         console.log(enteredUsername);
         try {
             const response = await fetch(url);
@@ -21,7 +22,6 @@ function SearchBar (props) {
             if (response.ok) {
                 const data = await response.json();
                 setSearchResults(data);
-                setIsModalOpen(true);
             } else {
                 console.error('Request failed with status: ', response.status);
             }
@@ -61,7 +61,10 @@ function SearchBar (props) {
                 defaultValue={' '}
                 onChangeText={usernameInputHandler}
             />
-            <Button title={"Go"} onPress={getPlayerID}/>
+            <Button
+                title={"Go"}
+                color={"#313a2c"}
+                onPress={getPlayerID}/>
         </View>
 
     )
@@ -78,14 +81,15 @@ const styles = StyleSheet.create({
     },
     searchBar: {
         // flex: 1,
-        backgroundColor: 'white',
+        backgroundColor: '#313a2c',
         width: '70%',
         height: 40,
-        borderWidth: 1,
-        borderColor: 'red',
+        // borderWidth: 1,
+        // borderColor: 'red',
         borderRadius: 20,
-        color: 'red',
+        color: 'white',
         textAlign: 'center',
         marginRight: 8,
+        fontSize: 16,
     },
 });
